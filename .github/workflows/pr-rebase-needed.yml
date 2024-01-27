@@ -4,11 +4,3 @@ on:
   push:
   pull_request_target:
     types: [synchronize]
-
-jobs:
-  label-rebase-needed:
-    uses: mdn/workflows/.github/workflows/pr-rebase-needed.yml@main
-    with:
-      target-repo: "mdn/content"
-    secrets:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
